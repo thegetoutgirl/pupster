@@ -7,6 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import Header from '../header/header.js'
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -57,21 +59,29 @@ export default function Appbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+    <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="About" {...a11yProps(0)} />
-          <Tab label="Discover" {...a11yProps(1)} />
-          <Tab label="Search" {...a11yProps(2)} />
+        <Tab label="Pupster" disabled />
+        <Tab label="About" {...a11yProps(1)} />
+        <Tab label="Discover" {...a11yProps(2)} />
+        <Tab label="Search" {...a11yProps(3)} /> 
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Item One
+      <Header />
+        AboutPage
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+      <Header />
+        AboutPage
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <Header />
+        DiscoverPage
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+      <Header />
+        SearchPage
       </TabPanel>
     </div>
   );
