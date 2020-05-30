@@ -8,7 +8,8 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
 import Header from "../header/header.js";
-import AboutPage from "../../pages/aboutPage.jsx";
+import AboutPage from "../../pages/aboutPage.jsx"
+import SearchPage from "../../pages/searchPage.jsx";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -81,12 +82,10 @@ export default function Appbar() {
         <AboutPage />
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <Header />
         Discover Page
       </TabPanel>
       <TabPanel value={value} index={3}>
-      <Header />
-        Search Page
+        <SearchPage />
       </TabPanel>
     </div>
   );

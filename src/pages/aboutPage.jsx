@@ -4,7 +4,7 @@ export default function AboutPage() {
     return(
     <div>
     <h1>Welcome to Pupster</h1>
-    <p>Content goes here</p>
+    <p>Pupster is an app for you to find new doggie friends.</p>
   </div>  
 );
 }
